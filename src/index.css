@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;700&display=swap');
+
+@theme {
+  --font-syne: "Syne", sans-serif;
+  --font-dm: "DM Sans", sans-serif;
+  
+  --color-brand-bg: #0d1117;
+  --color-brand-card: #161b22;
+  --color-brand-accent: #3dd68c;
+  --color-brand-accent2: #58a6ff;
+  --color-brand-warn: #f0c040;
+  --color-brand-danger: #ff6b6b;
+  --color-brand-text: #e6edf3;
+  --color-brand-muted: #8b949e;
+  
+  --radius-brand: 20px;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-text font-dm;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.5); }
+  50% { transform: scaleY(1); }
+}
+
+@keyframes pulse-custom {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes bounce-custom {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-5px); }
+}
+
+.animate-wave {
+  animation: wave 0.8s ease infinite;
+}
+
+.animate-pulse-custom {
+  animation: pulse-custom 2s infinite;
+}
+
+.animate-bounce-custom {
+  animation: bounce-custom 1s infinite;
+}

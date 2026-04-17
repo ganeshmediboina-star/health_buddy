@@ -1,0 +1,8 @@
+{
+  "name": "Health Buddy",
+  "description": "A smart hourly wellness companion that uses AI to provide personalized break suggestions, motivational messages, and medical guidance.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": []
+}
